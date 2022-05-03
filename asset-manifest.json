@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DATAFilmes/static/css/main.e5e232d0.css",
+    "main.js": "/DATAFilmes/static/js/main.4e4fdfde.js",
+    "index.html": "/DATAFilmes/index.html",
+    "main.e5e232d0.css.map": "/DATAFilmes/static/css/main.e5e232d0.css.map",
+    "main.4e4fdfde.js.map": "/DATAFilmes/static/js/main.4e4fdfde.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5e232d0.css",
+    "static/js/main.4e4fdfde.js"
+  ]
+}
