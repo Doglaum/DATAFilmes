@@ -48,7 +48,7 @@ export const GlobalList = styled.ul`
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  margin: 50px auto 20px auto;
+  margin: 50px 10% 20px 10%;
   column-gap: 3rem;
   row-gap: 4rem;
 `

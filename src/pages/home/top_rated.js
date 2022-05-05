@@ -5,27 +5,11 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import api from '../../services/api'
+import { slickSettings } from './slickSettings'
 
 function TopRated() {
   //Carrousel settings//
-  const settings = {
-    className: 'center',
-    infinite: true,
-    centerPadding: '60px',
-    speed: 1000,
-    slidesToScroll: 4,
-    adaptiveHeight: true,
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          speed: 0,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  }
+  const settings = slickSettings
   ////////////////////
 
   const image_path = 'https://image.tmdb.org/t/p/w500'
@@ -42,6 +26,7 @@ function TopRated() {
     getApi()
   }, [])
 
+
   return (
     <>
       <Container>
@@ -52,7 +37,7 @@ function TopRated() {
               return (
                 <Movie key={movie.id}>
                   <Link to={`/details/${movie.id}`}>
-                    <img
+                    <img onClick={() => {console.log("zequinha")}}
                       src={`${image_path}${movie.poster_path}`}
                       alt={movie.title}
                     />
