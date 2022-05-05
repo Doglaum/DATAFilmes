@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { Container, Text } from './styles'
+import { useParams } from 'react-router-dom'
+import { Back, Container, Text } from './styles'
 import axios from 'axios'
 import Header from '../header'
 
@@ -39,9 +39,9 @@ function Details() {
           <Text className="release-date">
             Data de lançamento: {movie.releaseDate}
           </Text>
-          <Link to="/">
-            <button>Voltar</button>
-          </Link>
+          <div onClick={() => {window.history.back()}}>
+            <Back>Voltar</Back>
+          </div>
         </div>
       </div>
     </Container>

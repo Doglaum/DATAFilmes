@@ -1,40 +1,18 @@
-import { Head, Nav, Text, Title } from './styles'
+import { Link } from 'react-router-dom'
+import { Head, Title } from './styles'
 
 function Header(props) {
   return (
-    <Head>
-      <Title>
-        data<Text>Filmes</Text>
-      </Title>
-      <Nav>
-        <ul>
-          <li
-            onClick={() => {
-              props.setNavigate('popular')
-              props.setTitle('Populares')
-            }}
-          >
-            Popular
-          </li>
-          <li
-            onClick={() => {
-              props.setNavigate('top_rated')
-              props.setTitle('Mais votados')
-            }}
-          >
-            Mais votados
-          </li>
-          <li
-            onClick={() => {
-              props.setNavigate('upcoming')
-              props.setTitle('Em breve')
-            }}
-          >
-            Em breve
-          </li>
-        </ul>
-      </Nav>
-    </Head>
+    <>
+      <Head>
+        <Title>
+          data<span>Filmes</span>
+        </Title>
+        <Link to={`/search`} >
+          <h1>Procurando algo?</h1>
+        </Link>
+      </Head>
+    </>
   )
 }
 

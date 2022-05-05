@@ -37,7 +37,13 @@ export const Container = styled.div`
     margin-bottom: 1.5rem;
   }
 
-  button {
+  .release-date {
+    opacity: 0.5;
+  }
+`
+
+export const Back = styled.button`
+  
     background: #6654da;
     border: none;
     cursor: pointer;
@@ -47,13 +53,9 @@ export const Container = styled.div`
     margin-top: 1rem;
     font-size: 100%;
     transition: all 0.3s;
-  }
+  
 
-  button:hover {
+ :hover {
     background-color: #5848c2;
-  }
-
-  .release-date {
-    opacity: 0.5;
   }
 `
