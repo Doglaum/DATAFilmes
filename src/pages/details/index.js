@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Back, Container, Text } from './styles'
+import { Back, Container, ContainerImg, Text } from './styles'
 import axios from 'axios'
 import Header from '../header'
 
@@ -29,22 +29,30 @@ function Details() {
   }, [id])
 
   return (
-    <Container>
+    <>
       <Header></Header>
-      <div className="movie">
+      <Container>
+        <ContainerImg>
         <img src={movie.image} alt={movie.sinopse} />
-        <div className="details">
-          <h1>{movie.title}</h1>
-          <Text>Sinopse: {movie.sinopse}</Text>
-          <Text className="release-date">
-            Data de lançamento: {movie.releaseDate}
-          </Text>
-          <div onClick={() => {window.history.back()}}>
-            <Back>Voltar</Back>
+        </ContainerImg>
+        <div className="movie">
+          <div className="details">
+            <h1>{movie.title}</h1>
+            <Text>Sinopse: {movie.sinopse}</Text>
+            <Text className="release-date">
+              Data de lançamento: {movie.releaseDate}
+            </Text>
+            <div
+              onClick={() => {
+                window.history.back()
+              }}
+            >
+              <Back>Voltar</Back>
+            </div>
           </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   )
 }
 

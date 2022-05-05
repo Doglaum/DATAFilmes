@@ -8,29 +8,45 @@ export const Text = styled.span`
 `
 
 export const Container = styled.div`
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img{
+    width: auto;
+    max-width: 600px;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  img::before{
+    content: "a";
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    font-size: 50px;
+    color: red;
+    background: red;
+    left: 0;
+  }
+
+
   .movie {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
     background-color: #6c59e9c4;
     border-radius: 1rem;
   }
 
-  img {
-    width: 300px;
-    border-radius: 1rem;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-  }
-
   .details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 4rem;
+    margin: 15px;
+    max-width: 600px;
   }
 
   .details h1 {
@@ -40,6 +56,13 @@ export const Container = styled.div`
   .release-date {
     opacity: 0.5;
   }
+
+  @media (max-width:650px){
+    img {
+      width: 300px;
+    }
+  }
+
 `
 
 export const Back = styled.button`
@@ -57,5 +80,20 @@ export const Back = styled.button`
 
  :hover {
     background-color: #5848c2;
+  }
+`
+
+export const ContainerImg = styled.div`
+  position: relative;
+
+  ::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+background: linear-gradient(183deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.2665441176470589) 45%, rgba(0,0,0,0.46262254901960786) 80%);
   }
 `

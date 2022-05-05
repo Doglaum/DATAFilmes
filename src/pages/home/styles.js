@@ -8,11 +8,6 @@ export const MovieList = styled.div`
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: red; */
-
-  @media (max-width:650px) {
-    max-width: 70%;
-  }
 `
 
 export const Atual = styled.h1`
@@ -47,12 +42,6 @@ export const Movie = styled.div`
 
   a:hover {
     transform: scale(1.1);
-  }
-
-  @media (max-width:650px) {
-    img{
-      width: 150px;
-    }
   }
 `
 

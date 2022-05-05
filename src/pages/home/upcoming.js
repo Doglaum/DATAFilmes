@@ -16,11 +16,6 @@ function Upcoming() {
     swipeToSlide: true,
     adaptiveHeight: true,
     variableWidth: true,
-    afterChange: function (index) {
-      console.log(
-        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-      )
-    }
   }
   ////////////////////
   const image_path = 'https://image.tmdb.org/t/p/w500'
