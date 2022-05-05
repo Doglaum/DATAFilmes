@@ -12,10 +12,19 @@ function Upcoming() {
     className: 'center',
     infinite: true,
     centerPadding: '60px',
-    slidesToShow: 5,
-    swipeToSlide: true,
+    speed: 1000,
+    slidesToScroll: 4,
     adaptiveHeight: true,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          speed: 0,
+          slidesToScroll: 1
+        }
+      }
+    ]
   }
   ////////////////////
   const image_path = 'https://image.tmdb.org/t/p/w500'
@@ -36,21 +45,21 @@ function Upcoming() {
     <>
       <Container>
         <MovieList>
-        <Atual>Em breve:</Atual>
+          <Atual>Em breve:</Atual>
           <Slider {...settings}>
             {movies.map(movie => {
-                return (
-                    <Movie key={movie.id} >
-                      <Link to={`/details/${movie.id}`}>
-                      <img 
-                        src={`${image_path}${movie.poster_path}`}
-                        alt={movie.title}
-                      />
-                      </Link>
-                      <span>{movie.title}</span>
-                    </Movie>
-                )
-              })}
+              return (
+                <Movie key={movie.id}>
+                  <Link to={`/details/${movie.id}`}>
+                    <img
+                      src={`${image_path}${movie.poster_path}`}
+                      alt={movie.title}
+                    />
+                  </Link>
+                  <span>{movie.title}</span>
+                </Movie>
+              )
+            })}
           </Slider>
         </MovieList>
       </Container>

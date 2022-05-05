@@ -5,9 +5,8 @@ export const Container = styled.div`
 `
 
 export const MovieList = styled.div`
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
+  margin-right: 10%;
 `
 
 export const Atual = styled.h1`
@@ -50,7 +49,6 @@ export const GlobalList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin: 50px auto 20px auto;
-  max-width: 70%;
   column-gap: 3rem;
   row-gap: 4rem;
 `
