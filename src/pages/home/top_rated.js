@@ -31,7 +31,7 @@ function TopRated() {
     <>
       <Container>
         <MovieList>
-          <Atual>Melhor avaliados:</Atual>
+          <Atual>Melhor avaliados</Atual>
           <Slider {...settings}>
             {movies.map(movie => {
               return (

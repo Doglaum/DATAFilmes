@@ -10,8 +10,8 @@ export const MovieList = styled.div`
 `
 
 export const Atual = styled.h1`
-  margin-bottom: 15px;
-`
+  font-size: 35px;
+  margin-bottom: 5px;`
 
 export const Movie = styled.div`
   text-align: center;
@@ -48,7 +48,7 @@ export const GlobalList = styled.ul`
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  margin: 50px 10% 20px 10%;
+  margin: 50px 20% 20px 20%;
   column-gap: 3rem;
   row-gap: 4rem;
 `

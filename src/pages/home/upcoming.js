@@ -29,7 +29,7 @@ function Upcoming() {
     <>
       <Container>
         <MovieList>
-          <Atual>Em breve:</Atual>
+          <Atual>Em breve</Atual>
           <Slider {...settings}>
             {movies.map(movie => {
               return (

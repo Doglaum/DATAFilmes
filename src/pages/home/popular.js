@@ -30,7 +30,7 @@ function Popular() {
     <>
       <Container>
         <MovieList>
-          <Atual>Popular:</Atual>
+          <Atual>Popular</Atual>
           <Slider {...settings}>
             {movies.map(movie => {
               return (

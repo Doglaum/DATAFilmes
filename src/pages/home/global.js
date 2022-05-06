@@ -23,8 +23,8 @@ function Global() {
         `top_rated?api_key=${process.env.REACT_APP_PV_KEY}&language=pt-BR&page=1`
       )
     ]).then(response => {
-      let arr = response[0].data.results
-      arr = [...arr, ...response[1].data.results, ...response[2].data.results]
+      let arr = []
+      arr = [...response[0].data.results, ...response[1].data.results, ...response[2].data.results]
       setMovies(arr)
     })
   }, [])
