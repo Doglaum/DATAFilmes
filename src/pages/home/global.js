@@ -31,7 +31,7 @@ function Global() {
 
   return (
     <>
-      <Header></Header>
+      <Header opacity={'hidden'}></Header>
       <Search onChange={e => setSearchMovies(e.target.value, console.log(e))}></Search>
         <GlobalList>
           {movies
