@@ -32,7 +32,7 @@ function Global() {
   return (
     <>
       <Header opacity={'hidden'}></Header>
-      <Search onChange={e => setSearchMovies(e.target.value, console.log(e))}></Search>
+      <Search onChange={e => setSearchMovies(e.target.value)}></Search>
         <GlobalList>
           {movies
             .filter(movie =>
@@ -53,7 +53,6 @@ function Global() {
               )
             })}
         </GlobalList>
-      )
     </>
   )
 }
